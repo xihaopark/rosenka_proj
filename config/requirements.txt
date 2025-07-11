@@ -1,0 +1,20 @@
+streamlit>=1.28.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+pandas>=2.0.0
+numpy>=1.24.0
+Pillow>=10.0.0
+PyMuPDF>=1.23.0
+opencv-python>=4.8.0
+pytesseract>=0.3.10
+rapidfuzz>=3.0.0
+plotly>=5.0.0
+urllib3>=1.26.0
+
+# オプション（EasyOCRを使用する場合）
+easyocr>=1.7.0
+torch>=2.0.0
+
+# 2. Tesseract日本語データをインストール（macOSの場合）
+# brew install tesseract
+# brew install tesseract-lang

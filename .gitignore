@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 虚拟环境
+venv/
+venv_simple/
+ENV/
+.env/
+
+# 数据与大文件
+rosenka_data/
+*.pdf
+*.log
+*.pkl
+*.db
+*.sqlite
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 其他
+.idea/
+.vscode/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Streamlit
+.streamlit/
+
+# Cache directories
+.cache/
+__pycache__/
+
+# Data files (keep structure but ignore large files)
+rosenka_data/**/*.pdf
+*.pdf
+*.pth
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# API keys (if any)
+api.py
+config.py
+secrets.py 
