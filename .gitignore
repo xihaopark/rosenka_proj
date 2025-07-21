@@ -115,4 +115,14 @@ secrets.yaml
 
 # PDF文件（除了测试用的小文件）
 *.pdf
-!test.pdf
+!test1.pdf
+!test2.pdf
+
+# 测试和调试文件
+test_*.py
+debug_*/
+stage5_test*
+*test_result*
+*_quick_*
+*_lightweight_*
+test*_stage5_output/

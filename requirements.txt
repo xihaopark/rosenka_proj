@@ -23,8 +23,13 @@ PyYAML>=6.0
 pathlib
 typing-extensions>=4.0.0
 
+# Stage 5 新增依赖 - Stage 5 Additional Dependencies
+scikit-learn>=1.0.0  # 用于DBSCAN聚类分析
+scipy>=1.8.0         # 用于空间距离计算
+
 # 可选OCR引擎 - Optional OCR Engine
-# easyocr>=1.7.0  # 取消注释以启用EasyOCR支持
+easyocr>=1.7.0       # Stage 5启用EasyOCR支持
+pytesseract>=0.3.10  # Tesseract OCR支持
 
 # 开发工具 - Development Tools (Optional)
 # pytest>=7.0.0
