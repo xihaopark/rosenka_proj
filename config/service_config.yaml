@@ -1,0 +1,122 @@
+# 路線価図查询服务配置文件
+# service_config.yaml
+
+# 服务基本配置
+service:
+  name: "路線価図查询服务"
+  version: "1.0.0"
+  description: "高性能的路線価図地址查询服务"
+  debug: false
+
+# API服务配置
+api:
+  host: "127.0.0.1"
+  port: 8000
+  workers: 1
+  reload: true
+  log_level: "info"
+  cors_origins: ["*"]
+  
+# Web界面配置  
+web:
+  host: "127.0.0.1"
+  port: 8501
+  title: "🗾 路線価図查询系统"
+  layout: "wide"
+  theme: "light"
+
+# 数据配置
+data:
+  base_dir: "./rosenka_data"
+  cache_dir: "./.cache"
+  index_file: "address_index.pkl"
+  database_file: "rosenka_service.db"
+
+# OCR配置
+ocr:
+  # 优先级顺序：paddleocr > easyocr > tesseract
+  engines:
+    - name: "paddleocr"
+      enabled: true
+      config:
+        use_angle_cls: true
+        lang: "japan"
+        show_log: false
+    - name: "easyocr"
+      enabled: true
+      config:
+        lang: ["ja", "en"]
+    - name: "tesseract"
+      enabled: true
+      config:
+        lang: "jpn"
+        oem: 3
+        psm: 6
+  
+  # 图像处理参数
+  image_processing:
+    dpi: 300
+    max_image_size: 2048
+    enhance_contrast: true
+    denoise: true
+
+# 搜索配置
+search:
+  similarity_threshold: 50
+  max_results: 100
+  max_files_per_search: 50
+  enable_fuzzy_search: true
+  enable_partial_match: true
+  
+  # 缓存配置
+  cache:
+    enabled: true
+    ttl: 3600  # 1小时
+    max_size: 1000
+    cleanup_interval: 3600
+
+# 性能配置
+performance:
+  max_workers: 4
+  thread_pool_size: 8
+  process_pool_size: 2
+  memory_limit: "2GB"
+  
+  # 并发限制
+  concurrent_searches: 10
+  rate_limit:
+    requests_per_minute: 60
+    burst_size: 10
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "rosenka_service.log"
+  max_size: "10MB"
+  backup_count: 5
+
+# 监控配置
+monitoring:
+  enabled: true
+  metrics_port: 9090
+  health_check_interval: 30
+  
+  # 统计信息
+  collect_stats: true
+  stats_retention: 7  # 天
+
+# 安全配置
+security:
+  enable_cors: true
+  enable_rate_limiting: true
+  api_key_required: false
+  allowed_hosts: ["*"]
+
+# 特性开关
+features:
+  enable_async_processing: true
+  enable_image_caching: true
+  enable_result_export: true
+  enable_batch_processing: false
+  enable_api_docs: true 

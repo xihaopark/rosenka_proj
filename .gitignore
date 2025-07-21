@@ -1,0 +1,118 @@
+# 路線価図OCR系统 .gitignore
+
+# 数据文件（太大，仅本地保留）
+rosenka_data/
+downloads/
+
+# 虚拟环境
+venv/
+env/
+.env
+.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 日志文件
+*.log
+
+# 缓存文件
+*.pkl
+*.cache
+
+# 测试输出
+test_output/
+visualizations/
+
+# 临时图像文件
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.gif
+
+# 模型文件（太大，可自动下载）
+models/
+*.pt
+*.pth
+*.onnx
+*.pb
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.tmp
+*.temp
+
+# 测试相关
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 临时文件
+temp/
+tmp/
+*.tmp
+
+# 配置文件（可能包含敏感信息）
+config.local.yaml
+secrets.yaml
+
+# 备份文件
+*.bak
+*.backup
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.rar
+
+# PDF文件（除了测试用的小文件）
+*.pdf
+!test.pdf

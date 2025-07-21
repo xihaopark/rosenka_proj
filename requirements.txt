@@ -1,0 +1,37 @@
+# 路線価図OCR系统 v4.0 - 精简依赖包
+# Route Price Map OCR System v4.0 - Minimal Dependencies
+
+# 核心OCR引擎 - Core OCR Engines
+paddlepaddle>=2.5.0
+paddleocr>=2.7.0
+numpy==1.24.3
+
+# 图像处理 - Image Processing
+opencv-python>=4.8.0
+Pillow>=9.0.0
+
+# PDF处理 - PDF Processing
+PyMuPDF>=1.23.0
+
+# 数据处理 - Data Processing
+pandas>=1.5.0,<2.0.0
+
+# 配置管理 - Configuration
+PyYAML>=6.0
+
+# 系统工具 - System Utilities
+pathlib
+typing-extensions>=4.0.0
+
+# 可选OCR引擎 - Optional OCR Engine
+# easyocr>=1.7.0  # 取消注释以启用EasyOCR支持
+
+# 开发工具 - Development Tools (Optional)
+# pytest>=7.0.0
+# black>=23.0.0
+
+# 注意事项 - Notes:
+# 1. numpy版本固定为1.24.3以确保与PaddleOCR兼容
+# 2. pandas版本限制避免依赖冲突
+# 3. 所有依赖都经过v4.0系统测试验证
+# 4. 如需GPU加速，请安装: pip install paddlepaddle-gpu
